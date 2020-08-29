@@ -1,0 +1,33 @@
+.what-we-do-list {
+  display: flex;
+  justify-content: space-between;
+
+  &-img {
+    display: block;
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-name {
+    width: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $title-dark-theme-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}
