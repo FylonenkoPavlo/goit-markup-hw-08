@@ -1,9 +1,15 @@
+.header-menu-adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header-adress {
-  margin-left: auto;
+  &-list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
   &-list {
-    display: flex;
-
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -11,10 +17,6 @@
     letter-spacing: 0.02em;
 
     fill: $text-light-theme-color;
-  }
-
-  &-list-item:not(:last-child) {
-    margin-right: 30px;
   }
 
   &-list-icon {
@@ -36,5 +38,48 @@
   &-link:focus,
   &-link:hover {
     color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-adress {
+    margin-left: auto;
+
+    &-list {
+      display: flex;
+
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+
+      fill: $text-light-theme-color;
+    }
+
+    &-list-item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &-list-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      margin-right: 10px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $text-light-theme-color;
+
+      transition-property: color;
+      transition-duration: 250ms;
+    }
+
+    &-link:focus,
+    &-link:hover {
+      color: $accent-color;
+    }
   }
 }

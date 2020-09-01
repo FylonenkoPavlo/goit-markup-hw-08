@@ -1,33 +1,51 @@
-.what-we-do-list {
+/*.navigation {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
 
-  &-img {
-    display: block;
+.navigation-list {
+  display: flex;
+  &-item:not(:last-child) {
+    margin-right: 50px;
   }
-
-  &-item {
-    position: relative;
-  }
-
-  &-name {
-    width: 100%;
-
-    position: absolute;
-
-    bottom: 0;
-
-    margin: 0;
-    padding-top: 27px;
-    padding-bottom: 27px;
-
-    font-weight: 700;
+  &-link {
+    padding-top: 32px;
+    padding-bottom: 0px;
+    font-weight: 500;
     font-size: 14px;
-    line-height: 1.17;
-    text-align: center;
-    text-transform: uppercase;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-    color: $title-dark-theme-color;
-    background-color: rgba(47, 48, 58, 0.8);
+    color: $title-light-theme-color;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+
+  &-link::after {
+    display: block;
+    margin-top: 28px;
+    width: auto;
+    height: 4px;
+    background-color: $accent-color;
+    content: "";
+    border-radius: 2px;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+
+  &-link:focus::after,
+  &-link:hover::after {
+    opacity: 1;
+  }
+
+  &-link:focus,
+  &-link:hover {
+    color: $accent-color;
   }
 }
+*/
