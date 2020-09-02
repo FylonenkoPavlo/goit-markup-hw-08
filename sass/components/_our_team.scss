@@ -1,51 +1,114 @@
-/*.navigation {
-  display: flex;
-  align-items: center;
+.our-team-social-links {
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+
+    transition-property: fill, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+  }
+
+  &-item:hover,
+  &-item:focus {
+    fill: #fff;
+    background-color: $accent-color;
+    cursor: pointer;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.navigation-list {
-  display: flex;
-  &-item:not(:last-child) {
-    margin-right: 50px;
+.our-team-list {
+  &-item {
+    max-width: 480px;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
   }
-  &-link {
-    padding-top: 32px;
-    padding-bottom: 0px;
+
+  &-img {
+    display: block;
+  }
+  &-name {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 1.19;
+
+    text-align: center;
 
     color: $title-light-theme-color;
-
-    transition-property: color, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
   }
 
-  &-link::after {
-    display: block;
-    margin-top: 28px;
-    width: auto;
-    height: 4px;
-    background-color: $accent-color;
-    content: "";
-    border-radius: 2px;
-    opacity: 0;
+  &-position {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
 
-    transition-property: opacity;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
-  }
-
-  &-link:focus::after,
-  &-link:hover::after {
-    opacity: 1;
-  }
-
-  &-link:focus,
-  &-link:hover {
-    color: $accent-color;
+    text-align: center;
   }
 }
-*/
+@media screen and (min-width: 1200px) {
+  .our-team-list {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      width: 270px;
+      padding-bottom: 24px;
+      background: #ffffff;
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &-img {
+      display: block;
+    }
+    &-name {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+
+      text-align: center;
+
+      color: $title-light-theme-color;
+    }
+
+    &-position {
+      margin-top: 0px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.19;
+
+      text-align: center;
+    }
+  }
+}
