@@ -2,6 +2,9 @@
   display: none;
 }
 @media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: flex;
+  }
   .what-we-do-list {
     display: flex;
     justify-content: space-between;
